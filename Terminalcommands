@@ -1,0 +1,15 @@
+sudo apt-get update
+
+sudo apt-get install python3 python3-pip
+
+sudo apt-get install python3-venv
+
+mkdir myproject
+cd myproject
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install Adafruit-PN532
+
+python read_nfc.py

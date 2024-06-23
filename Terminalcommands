@@ -1,15 +1,24 @@
-sudo apt-get update
+# Update the package list to ensure you get the latest versions available
+sudo apt-get update 
 
+# Install Python 3 and pip, the package installer for Python
 sudo apt-get install python3 python3-pip
 
+# Install the Python 3 virtual environment package
 sudo apt-get install python3-venv
 
+# Create a new directory for your project and navigate into it
 mkdir myproject
 cd myproject
+
+# Create a virtual environment named 'venv' within your project directory
 python3 -m venv venv
 
+# Activate the virtual environment to use it for this project
 source venv/bin/activate
 
+# Install the Adafruit PN532 library within the virtual environment
 pip install Adafruit-PN532
 
+# Run the Python script to interact with the NFC reader
 python read_nfc.py
